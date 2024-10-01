@@ -37,6 +37,7 @@ namespace ECommerce.APP.SharedLibrary.ServiceContainer
         {
             //Register middleware to block all outside middleware call.
             app.UseMiddleware<ApiGatewayMiddleware>();
+            app.UseMiddleware<GlobalExceptionMiddleware>();
 
             return app;
         }
