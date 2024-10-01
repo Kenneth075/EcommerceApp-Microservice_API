@@ -59,7 +59,7 @@ namespace EcommerceApp.ProductApi.Controllers
                 return BadRequest();
 
             var prod = ClassConversion.ToEntity(productDto);
-            var result = await productInterface.CreateAsync(prod);
+            var result = await productInterface.UpdateAsync(prod);
             if (result.Flag == true)
                 return Ok(result);
             return BadRequest(result);

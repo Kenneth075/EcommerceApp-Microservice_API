@@ -1,0 +1,16 @@
+2024-10-02 00:12:15.449 +01:00 [INF] An error occurred while saving the entity changes. See the inner exception for details.
+2024-10-02 00:12:15.514 +01:00 [WRN] An error occurred while saving the entity changes. See the inner exception for details.
+2024-10-02 00:12:52.356 +01:00 [INF] An error occurred while saving the entity changes. See the inner exception for details.
+2024-10-02 00:12:52.361 +01:00 [WRN] An error occurred while saving the entity changes. See the inner exception for details.
+2024-10-02 00:21:10.766 +01:00 [INF] The instance of entity type 'Product' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+2024-10-02 00:21:10.824 +01:00 [WRN] The instance of entity type 'Product' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+2024-10-02 00:21:11.090 +01:00 [INF] Fail to update product
+2024-10-02 00:21:11.096 +01:00 [WRN] Fail to update product
+2024-10-02 00:23:58.000 +01:00 [INF] The instance of entity type 'Product' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+2024-10-02 00:23:58.013 +01:00 [WRN] The instance of entity type 'Product' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+2024-10-02 00:23:58.139 +01:00 [INF] Fail to update product
+2024-10-02 00:23:58.142 +01:00 [WRN] Fail to update product
+2024-10-02 00:31:36.619 +01:00 [INF] The instance of entity type 'Product' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+2024-10-02 00:31:36.668 +01:00 [WRN] The instance of entity type 'Product' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+2024-10-02 00:31:36.865 +01:00 [INF] Fail to update product
+2024-10-02 00:31:36.869 +01:00 [WRN] Fail to update product

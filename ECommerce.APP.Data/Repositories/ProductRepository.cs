@@ -122,8 +122,8 @@ namespace ECommerce.APP.Service.Repositories
                 if (product == null)
                     return new AppResponse(false, "product does not exist");
 
-                dbContext.Entry(entity).State = EntityState.Detached;
-                dbContext.Update(product);
+                dbContext.Entry(product).State = EntityState.Detached;
+                dbContext.Products.Update(entity);
                 await dbContext.SaveChangesAsync();
 
                 return new AppResponse(true, "Product updated successfully");
