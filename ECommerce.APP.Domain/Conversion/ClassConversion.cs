@@ -28,6 +28,27 @@ namespace ECommerce.APP.Domain.Conversion
 
         }
 
+        public static Order ToEntityOrder(OrderDto orderDto)
+        {
+            return new Order
+            {
+                Id= orderDto.Id,
+                ProductId= orderDto.ProductId,
+                ClientId= orderDto.ClientId,
+                PurchaseQuantity = orderDto.purchasedQuantity
+            };
+
+        }
+
+        public static Order ToEntityOrder(CreateOrderDto createOrderDto)
+        {
+            return new Order
+            {
+                ProductId = createOrderDto.ProductId,
+                PurchaseQuantity = createOrderDto.purchasedQuantity
+            };
+        }
+
         public static (ProductDto,IEnumerable<ProductDto>) FromEntity(Product product, IEnumerable<Product> products)
         {
             //Return single product
@@ -50,6 +71,30 @@ namespace ECommerce.APP.Domain.Conversion
             }
 
             return(null!, null!);
+        }
+
+        public static (OrderDto, IEnumerable<OrderDto>) FromEntityOrder(Order order, IEnumerable<Order> orders)
+        {
+            //Return single product
+            if (order != null || orders == null)
+            {
+                var singleProduct = new OrderDto(
+                    order.Id,
+                    order.ProductId,
+                    order.ClientId,
+                    order.PurchaseQuantity
+                    );
+                return (singleProduct, null!);
+            }
+
+            //Return all products
+            if (order == null || orders != null)
+            {
+                var orderResult = orders.Select(p => new OrderDto(p.Id, p.ProductId, p.ClientId, p.PurchaseQuantity )).ToList();
+                return (null!, orderResult);
+            }
+
+            return (null!, null!);
         }
     }
 }

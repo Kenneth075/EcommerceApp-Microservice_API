@@ -113,7 +113,8 @@ namespace ECommerce.APP.Data.Repositories
                 if (order == null)
                     return new AppResponse(false, "Order not find");
 
-                dbContext.Entry(order).State = EntityState.Modified;
+                dbContext.Entry(order).State = EntityState.Detached;
+                dbContext.Orders.Update(entity);
                 await dbContext.SaveChangesAsync();
 
                 return new AppResponse(true, "Order updated successfully");

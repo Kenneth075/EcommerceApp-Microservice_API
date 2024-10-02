@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddProductsDatabase(builder.Configuration);
+builder.Services.AddDatabaseService(builder.Configuration);
 
 var app = builder.Build();
 
@@ -20,7 +20,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UserProductInfrasturePolicy();
+app.UserInfrasturePolicy();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

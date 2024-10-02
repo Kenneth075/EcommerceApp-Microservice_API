@@ -6,8 +6,14 @@ namespace ECommerce.APP.Domain.Dtos
         Guid Id,
         Guid ProductId,
         Guid ClientId,
-        [Required, Range(1,int.MaxValue)] int purchasedQuantity,
+        [Required, Range(1,int.MaxValue)] int purchasedQuantity
+        );
+
+
+    public record CreateOrderDto(
+        Guid ProductId,
+        [Required, Range(1, int.MaxValue)] int purchasedQuantity,
         DateTime OrderDate
         );
-    
+
 }
