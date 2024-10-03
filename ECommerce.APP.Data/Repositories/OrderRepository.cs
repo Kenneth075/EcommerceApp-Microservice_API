@@ -105,6 +105,23 @@ namespace ECommerce.APP.Data.Repositories
             }
         }
 
+        public async Task<IEnumerable<Order>> GetClientOrders(Expression<Func<Order, bool>> predicate)
+        {
+            try
+            {
+                var clientOrder = await dbContext.Orders.Where(predicate).ToListAsync();
+                if (clientOrder.Any())
+                    return clientOrder;
+                return null!;
+
+            }
+            catch (Exception ex)
+            {
+                LogExceptions.LogExcep(ex);
+                throw new Exception("Failed. An error occur while retrieving client order");
+            }
+        }
+
         public async Task<AppResponse> UpdateAsync(Order entity)
         {
             try

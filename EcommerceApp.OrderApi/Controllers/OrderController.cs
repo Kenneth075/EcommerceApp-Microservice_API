@@ -2,6 +2,7 @@
 using ECommerce.APP.Domain.Dtos;
 using ECommerce.APP.Domain.Entities;
 using ECommerce.APP.Service.Interfaces;
+using ECommerce.APP.Service.OrderServices;
 using ECommerce.APP.SharedLibrary.AppResponses;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,10 +13,12 @@ namespace EcommerceApp.OrderApi.Controllers
     public class OrderController : ControllerBase
     {
         private readonly IOrder orderInterface;
+        private readonly IOrderService orderService;
 
-        public OrderController(IOrder orderInterface)
+        public OrderController(IOrder orderInterface, IOrderService orderService)
         {
             this.orderInterface = orderInterface;
+            this.orderService = orderService;
         }
 
         [HttpGet]
@@ -70,5 +73,24 @@ namespace EcommerceApp.OrderApi.Controllers
                 return Ok(order);
             return BadRequest(order);
         }
+
+        [HttpGet("Client/{clientId:Guid}")]
+        public async Task<ActionResult<IEnumerable<OrderDto>>> GetOrderByClientAync(Guid clientId)
+        {
+            var orders = await orderService.GetOrderByClientAsync(clientId);
+            if (orders == null)
+                return NotFound(orders);
+            return Ok(orders);
+        }
+
+        [HttpGet("{id:Guid}")]
+        public async Task<ActionResult<OrderDetailsDto>> GetOrderDetailsAsync(Guid id)
+        {
+            var order = await orderService.GetOrderDetailsAsync(id);
+            if (order == null)
+                return NotFound(order);
+            return Ok(order);
+        }
+
     }
 }
