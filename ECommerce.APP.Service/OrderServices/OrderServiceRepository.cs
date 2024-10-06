@@ -92,7 +92,7 @@ namespace ECommerce.APP.Service.OrderServices
 
         private async Task<AppUserDto> GetUser(Guid userid)
         {
-            var getUser = await httpClient.GetAsync($"api//auth/{userid}");
+            var getUser = await httpClient.GetAsync($"api/auth/{userid}");
             if(!getUser.IsSuccessStatusCode)
                 return null!;
             var user = await getUser.Content.ReadFromJsonAsync<AppUserDto>();
