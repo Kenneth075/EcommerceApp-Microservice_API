@@ -1,0 +1,10 @@
+2024-10-06 13:24:53.992 +01:00 [INF] Unable to resolve service for type 'ECommerce.APP.Service.Interfaces.IUserInterface' while attempting to activate 'EcommerceApp.AuthApi.Controllers.AuthController'.
+2024-10-06 13:24:54.040 +01:00 [WRN] Unable to resolve service for type 'ECommerce.APP.Service.Interfaces.IUserInterface' while attempting to activate 'EcommerceApp.AuthApi.Controllers.AuthController'.
+2024-10-06 13:25:18.710 +01:00 [INF] Unable to resolve service for type 'ECommerce.APP.Service.Interfaces.IUserInterface' while attempting to activate 'EcommerceApp.AuthApi.Controllers.AuthController'.
+2024-10-06 13:25:18.717 +01:00 [WRN] Unable to resolve service for type 'ECommerce.APP.Service.Interfaces.IUserInterface' while attempting to activate 'EcommerceApp.AuthApi.Controllers.AuthController'.
+2024-10-06 13:25:30.004 +01:00 [INF] Unable to resolve service for type 'ECommerce.APP.Service.Interfaces.IUserInterface' while attempting to activate 'EcommerceApp.AuthApi.Controllers.AuthController'.
+2024-10-06 13:25:30.009 +01:00 [WRN] Unable to resolve service for type 'ECommerce.APP.Service.Interfaces.IUserInterface' while attempting to activate 'EcommerceApp.AuthApi.Controllers.AuthController'.
+2024-10-06 13:31:28.408 +01:00 [INF] Unable to resolve service for type 'ECommerce.APP.Service.Interfaces.IUserInterface' while attempting to activate 'EcommerceApp.AuthApi.Controllers.AuthController'.
+2024-10-06 13:31:28.459 +01:00 [WRN] Unable to resolve service for type 'ECommerce.APP.Service.Interfaces.IUserInterface' while attempting to activate 'EcommerceApp.AuthApi.Controllers.AuthController'.
+2024-10-06 13:31:55.351 +01:00 [INF] Unable to resolve service for type 'ECommerce.APP.Service.Interfaces.IUserInterface' while attempting to activate 'EcommerceApp.AuthApi.Controllers.AuthController'.
+2024-10-06 13:31:55.355 +01:00 [WRN] Unable to resolve service for type 'ECommerce.APP.Service.Interfaces.IUserInterface' while attempting to activate 'EcommerceApp.AuthApi.Controllers.AuthController'.

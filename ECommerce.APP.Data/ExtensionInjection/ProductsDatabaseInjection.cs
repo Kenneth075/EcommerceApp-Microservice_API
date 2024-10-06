@@ -53,6 +53,7 @@ namespace ECommerce.APP.Data.ExtensionInjection
             services.AddScoped<IProductInterface, ProductRepository>();  
 
             services.AddScoped<IOrder, OrderRepository>();
+            services.AddScoped<IUserInterface, AppUserRepository>();
 
             return services;
         }

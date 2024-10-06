@@ -83,10 +83,10 @@ namespace EcommerceApp.OrderApi.Controllers
             return Ok(orders);
         }
 
-        [HttpGet("{id:Guid}")]
-        public async Task<ActionResult<OrderDetailsDto>> GetOrderDetailsAsync(Guid id)
+        [HttpGet("{OrderId:Guid}")]
+        public async Task<ActionResult<OrderDetailsDto>> GetOrderDetailsAsync(Guid OrderId)
         {
-            var order = await orderService.GetOrderDetailsAsync(id);
+            var order = await orderService.GetOrderDetailsAsync(OrderId);
             if (order == null)
                 return NotFound(order);
             return Ok(order);

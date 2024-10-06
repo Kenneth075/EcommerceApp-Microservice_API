@@ -11,17 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentations", "Presentati
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{C3771C2B-539B-4DBA-99F6-371DB727C40C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.APP.Domain", "ECommerce.APP.Domain\ECommerce.APP.Domain.csproj", "{08CE957A-5877-4CD1-9E43-3D4177E86D78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.APP.Domain", "ECommerce.APP.Domain\ECommerce.APP.Domain.csproj", "{08CE957A-5877-4CD1-9E43-3D4177E86D78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.APP.Data", "ECommerce.APP.Data\ECommerce.APP.Data.csproj", "{A98FD5F6-C463-4842-8C59-DA6B0B59857C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.APP.Data", "ECommerce.APP.Data\ECommerce.APP.Data.csproj", "{A98FD5F6-C463-4842-8C59-DA6B0B59857C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.APP.Service", "ECommerce.APP.Service\ECommerce.APP.Service.csproj", "{090DCB3B-1753-4225-8A8C-4A6F322331CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.APP.Service", "ECommerce.APP.Service\ECommerce.APP.Service.csproj", "{090DCB3B-1753-4225-8A8C-4A6F322331CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.APP.SharedLibrary", "ECommerce.APP.SharedLibrary\ECommerce.APP.SharedLibrary.csproj", "{61EA135C-04DC-4E0D-BED0-D2E1FF4656DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.APP.SharedLibrary", "ECommerce.APP.SharedLibrary\ECommerce.APP.SharedLibrary.csproj", "{61EA135C-04DC-4E0D-BED0-D2E1FF4656DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceApp.ProductApi", "EcommerceApp.ProductApi\EcommerceApp.ProductApi.csproj", "{4324522E-1B1C-4800-9921-BA4BCB76DB4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcommerceApp.ProductApi", "EcommerceApp.ProductApi\EcommerceApp.ProductApi.csproj", "{4324522E-1B1C-4800-9921-BA4BCB76DB4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceApp.OrderApi", "EcommerceApp.OrderApi\EcommerceApp.OrderApi.csproj", "{AA456779-3B28-4CB4-9B14-14C80328E31A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcommerceApp.OrderApi", "EcommerceApp.OrderApi\EcommerceApp.OrderApi.csproj", "{AA456779-3B28-4CB4-9B14-14C80328E31A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceApp.AuthApi", "EcommerceApp.AuthApi\EcommerceApp.AuthApi.csproj", "{15918812-4EA5-4075-9052-DD6310C0D5BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{AA456779-3B28-4CB4-9B14-14C80328E31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA456779-3B28-4CB4-9B14-14C80328E31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA456779-3B28-4CB4-9B14-14C80328E31A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15918812-4EA5-4075-9052-DD6310C0D5BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15918812-4EA5-4075-9052-DD6310C0D5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15918812-4EA5-4075-9052-DD6310C0D5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15918812-4EA5-4075-9052-DD6310C0D5BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{61EA135C-04DC-4E0D-BED0-D2E1FF4656DD} = {2C557E86-499D-4D08-82C2-469CDB475B5A}
 		{4324522E-1B1C-4800-9921-BA4BCB76DB4C} = {B2517774-EDC2-41BE-9560-CE5921F56AA6}
 		{AA456779-3B28-4CB4-9B14-14C80328E31A} = {B2517774-EDC2-41BE-9560-CE5921F56AA6}
+		{15918812-4EA5-4075-9052-DD6310C0D5BB} = {B2517774-EDC2-41BE-9560-CE5921F56AA6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E87E072-21CC-46B0-8EB3-8FE190EA0D47}
