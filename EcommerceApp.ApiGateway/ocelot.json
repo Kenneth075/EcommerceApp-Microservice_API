@@ -7,7 +7,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7099
+          "Port": 7002
         }
       ],
       "UpstreamPathTemplate": "/api/auth/{everything}",
@@ -29,7 +29,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7043
+          "Port": 7000
         }
       ],
       "UpstreamPathTemplate": "/api/product",
@@ -47,7 +47,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7043
+          "Port": 7000
         }
       ],
       "UpstreamPathTemplate": "/api/product/{id}",
@@ -66,7 +66,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7043
+          "Port": 7000
         }
       ],
       "UpstreamPathTemplate": "/api/product/{everything}",
@@ -86,7 +86,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7038
+          "Port": 7001
         }
       ],
       "UpstreamPathTemplate": "/api/order",
@@ -109,7 +109,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7038
+          "Port": 7001
         }
       ],
       "UpstreamPathTemplate": "/api/order{id}",
@@ -132,7 +132,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7038
+          "Port": 7001
         }
       ],
       "UpstreamPathTemplate": "/api/order/{everything}",
@@ -144,7 +144,7 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:7025",
+    "BaseUrl": "https://localhost:7003",
     "RateLimitOption": {
       "QuoteExeccedingmessage": "Multiple request in a minute"
     }

@@ -47,6 +47,7 @@ namespace ECommerce.APP.Data.ExtensionInjection
             services.AddResiliencePipeline("my-retry-pipeline", builder =>
             {
                 builder.AddRetry(reTryStrategy);
+               
             });
 
             //Register repository services

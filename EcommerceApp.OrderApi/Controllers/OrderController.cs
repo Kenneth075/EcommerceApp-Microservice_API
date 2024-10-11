@@ -4,12 +4,14 @@ using ECommerce.APP.Domain.Entities;
 using ECommerce.APP.Service.Interfaces;
 using ECommerce.APP.Service.OrderServices;
 using ECommerce.APP.SharedLibrary.AppResponses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceApp.OrderApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize]
     public class OrderController : ControllerBase
     {
         private readonly IOrder orderInterface;

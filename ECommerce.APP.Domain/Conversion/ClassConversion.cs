@@ -45,6 +45,7 @@ namespace ECommerce.APP.Domain.Conversion
             return new Order
             {
                 ProductId = createOrderDto.ProductId,
+                ClientId= createOrderDto.ClientId,
                 PurchaseQuantity = createOrderDto.purchasedQuantity
             };
         }
@@ -52,7 +53,7 @@ namespace ECommerce.APP.Domain.Conversion
         public static (ProductDto,IEnumerable<ProductDto>) FromEntity(Product product, IEnumerable<Product> products)
         {
             //Return single product
-            if(product != null || products == null)
+            if(product != null && products == null)
             {
                 var singleProduct = new ProductDto(
                     product.Id,
@@ -64,7 +65,7 @@ namespace ECommerce.APP.Domain.Conversion
             }
 
             //Return all products
-            if(product == null || products != null)
+            if(product == null && products != null)
             {
                 var prod = products.Select(p => new ProductDto(p.Id,p.Name, p.Price, p.Quantity)).ToList();
                 return(null!, prod);
@@ -76,7 +77,7 @@ namespace ECommerce.APP.Domain.Conversion
         public static (OrderDto, IEnumerable<OrderDto>) FromEntityOrder(Order order, IEnumerable<Order> orders)
         {
             //Return single product
-            if (order != null || orders == null)
+            if (order != null && orders == null)
             {
                 var singleProduct = new OrderDto(
                     order.Id,
@@ -88,7 +89,7 @@ namespace ECommerce.APP.Domain.Conversion
             }
 
             //Return all products
-            if (order == null || orders != null)
+            if (order == null && orders != null)
             {
                 var orderResult = orders.Select(p => new OrderDto(p.Id, p.ProductId, p.ClientId, p.PurchaseQuantity )).ToList();
                 return (null!, orderResult);

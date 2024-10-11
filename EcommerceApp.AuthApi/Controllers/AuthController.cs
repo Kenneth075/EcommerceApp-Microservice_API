@@ -2,12 +2,14 @@
 using ECommerce.APP.Domain.Entities;
 using ECommerce.APP.Service.Interfaces;
 using ECommerce.APP.SharedLibrary.AppResponses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceApp.AuthApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class AuthController : ControllerBase
     {
         private readonly IUserInterface userInterface;
@@ -17,7 +19,8 @@ namespace EcommerceApp.AuthApi.Controllers
             this.userInterface = userInterface;
         }
 
-        [HttpGet]
+        [HttpGet("GetUsers")]
+        [Authorize(Roles ="Admin")]
         public async Task<ActionResult<AppUser>> GetAllUserAsync()
         {
             var user = await userInterface.GetUserAsync();
@@ -27,6 +30,7 @@ namespace EcommerceApp.AuthApi.Controllers
         }
 
         [HttpGet("{id:guid}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<AppUserDto>> GetAppUserAsync(Guid id)
         {
             var result = await userInterface.GetAppUserAsync(id);
@@ -61,7 +65,8 @@ namespace EcommerceApp.AuthApi.Controllers
             return Ok(result);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("User/{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<AppResponse>> DeleteUserAsync(Guid id)
         {
             var user = await userInterface.DeleteUserAsync(id);

@@ -3,12 +3,14 @@ using ECommerce.APP.Domain.Dtos;
 using ECommerce.APP.Domain.Entities;
 using ECommerce.APP.Service.Interfaces;
 using ECommerce.APP.SharedLibrary.AppResponses;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceApp.ProductApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class ProductController : ControllerBase
     {
         private readonly IProductInterface productInterface;
@@ -35,10 +37,11 @@ namespace EcommerceApp.ProductApi.Controllers
             var (prod,_) = ClassConversion.FromEntity(result, null!);
             if(prod != null)
                 return Ok(prod);
-            return NotFound("Product does not exist");
+            return NotFound("Product not found");
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<AppResponse>> CreateProductAsync(ProdDto prodDto)
         {
             if (!ModelState.IsValid)
@@ -53,6 +56,7 @@ namespace EcommerceApp.ProductApi.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<AppResponse>> UpdateAsync(ProductDto productDto)
         {
             if (!ModelState.IsValid) 
@@ -66,6 +70,7 @@ namespace EcommerceApp.ProductApi.Controllers
         }
 
         [HttpDelete("{id:guid}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<AppResponse>> DeleteAsync(Guid id)
         {
             var result = await productInterface.DeleteAsync(id);
