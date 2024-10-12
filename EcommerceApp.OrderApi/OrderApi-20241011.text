@@ -1,0 +1,7 @@
+2024-10-11 11:45:59.725 +01:00 [WRN] OnRetry, Attemp: 0, Outcome The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2024-10-11 11:48:28.842 +01:00 [WRN] OnRetry, Attemp: 0, Outcome The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2024-10-11 11:51:39.662 +01:00 [INF] Object reference not set to an instance of an object.
+2024-10-11 11:51:39.676 +01:00 [WRN] Object reference not set to an instance of an object.
+2024-10-11 11:54:35.868 +01:00 [WRN] OnRetry, Attemp: 0, Outcome The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2024-10-11 11:54:37.845 +01:00 [WRN] OnRetry, Attemp: 0, Outcome The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2024-10-11 13:25:08.905 +01:00 [WRN] OnRetry, Attemp: 0, Outcome The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.

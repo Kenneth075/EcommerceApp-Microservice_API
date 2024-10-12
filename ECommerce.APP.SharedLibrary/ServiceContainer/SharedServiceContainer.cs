@@ -36,8 +36,9 @@ namespace ECommerce.APP.SharedLibrary.ServiceContainer
         public static IApplicationBuilder UseSharedServicePolicy(this IApplicationBuilder app)
         {
             //Register middleware to block all outside middleware call.
-            //app.UseMiddleware<ApiGatewayMiddleware>();
-            //app.UseMiddleware<GlobalExceptionMiddleware>();
+
+            app.UseMiddleware<ApiGatewayMiddleware>();
+            app.UseMiddleware<GlobalExceptionMiddleware>();
 
             return app;
         }

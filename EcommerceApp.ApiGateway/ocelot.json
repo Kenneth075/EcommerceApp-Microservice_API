@@ -11,13 +11,13 @@
         }
       ],
       "UpstreamPathTemplate": "/api/auth/{everything}",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [ "GET", "POST","DELETE" ],
       "RateLimitOptions": {
         "ClientWhitelist": [],
         "EnableRateLimiting": true,
         "Limit": 1,
         "PeriodTimespan": 1,
-        "Period": "1m"
+        "Period": "60s"
       }
 
     },

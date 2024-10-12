@@ -35,7 +35,7 @@ namespace EcommerceApp.AuthApi.Controllers
         {
             var result = await userInterface.GetAppUserAsync(id);
             if (result == null)
-                return NotFound(result);
+                return NotFound();
             return Ok(result);
         }
 
@@ -71,7 +71,7 @@ namespace EcommerceApp.AuthApi.Controllers
         {
             var user = await userInterface.DeleteUserAsync(id);
             if (user.Flag == false)
-                return BadRequest(user);
+                return NotFound();
             return Ok(user);
         }
     }

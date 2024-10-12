@@ -11,7 +11,7 @@ namespace EcommerceApp.OrderApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class OrderController : ControllerBase
     {
         private readonly IOrder orderInterface;
@@ -85,7 +85,7 @@ namespace EcommerceApp.OrderApi.Controllers
             return Ok(orders);
         }
 
-        [HttpGet("{OrderId:Guid}")]
+        [HttpGet("details/{OrderId:Guid}")]
         public async Task<ActionResult<OrderDetailsDto>> GetOrderDetailsAsync(Guid OrderId)
         {
             var order = await orderService.GetOrderDetailsAsync(OrderId);

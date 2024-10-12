@@ -1,4 +1,5 @@
-﻿using ECommerce.APP.Domain.Dtos;
+﻿using ECommerce.APP.Domain.Conversion;
+using ECommerce.APP.Domain.Dtos;
 using ECommerce.APP.Domain.Entities;
 using ECommerce.APP.Service.Interfaces;
 using ECommerce.APP.SharedLibrary.Logs;
@@ -25,8 +26,8 @@ namespace ECommerce.APP.Service.OrderServices
             var order = await orderInterface.GetClientOrders(x => x.ClientId == clientId);
             if (order == null)
                 return null!;
-
-            return (IEnumerable<OrderDto>)order;
+            var (_, result) = ClassConversion.FromEntityOrder(null, order); 
+            return result;
 
         }
 
@@ -59,7 +60,7 @@ namespace ECommerce.APP.Service.OrderServices
                      appUser.Id,
                      appUser.Name,
                      appUser.Email,
-                     appUser.PhoneNumber,
+                     appUser.PhoneNumber!,
                      products.Name,
                      order.PurchaseQuantity,
                      products.Price,

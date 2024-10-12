@@ -10,7 +10,6 @@ namespace EcommerceApp.ProductApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AllowAnonymous]
     public class ProductController : ControllerBase
     {
         private readonly IProductInterface productInterface;
@@ -41,7 +40,7 @@ namespace EcommerceApp.ProductApi.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public async Task<ActionResult<AppResponse>> CreateProductAsync(ProdDto prodDto)
         {
             if (!ModelState.IsValid)
@@ -56,7 +55,7 @@ namespace EcommerceApp.ProductApi.Controllers
         }
 
         [HttpPut]
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public async Task<ActionResult<AppResponse>> UpdateAsync(ProductDto productDto)
         {
             if (!ModelState.IsValid) 
@@ -70,7 +69,7 @@ namespace EcommerceApp.ProductApi.Controllers
         }
 
         [HttpDelete("{id:guid}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public async Task<ActionResult<AppResponse>> DeleteAsync(Guid id)
         {
             var result = await productInterface.DeleteAsync(id);

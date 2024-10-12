@@ -72,7 +72,7 @@ namespace ECommerce.APP.Data.Repositories
 
         private string GenerateToken(AppUser getUser)
         {
-            var key = Encoding.UTF8.GetBytes(configuration["Authentication:Key"]!);
+            var key = Encoding.UTF8.GetBytes(configuration.GetSection("Authentication:Key").Value!);
             var securityKey = new SymmetricSecurityKey(key);
             var credential = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
@@ -92,7 +92,7 @@ namespace ECommerce.APP.Data.Repositories
                 issuer: configuration["Authentication:Issuer"],
                 audience: configuration["Authentication:Audience"],
                 claims:claims,
-                expires: DateTime.UtcNow.AddMinutes(3),
+                expires: DateTime.UtcNow.AddMinutes(15),
                 signingCredentials: credential
                 );
 

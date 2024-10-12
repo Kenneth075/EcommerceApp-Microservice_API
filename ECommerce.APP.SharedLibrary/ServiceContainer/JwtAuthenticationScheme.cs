@@ -11,13 +11,13 @@ namespace ECommerce.APP.SharedLibrary.ServiceContainer
     {
         public static IServiceCollection AddJwtAuthenticationScheme(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).
+            var key = Encoding.UTF8.GetBytes(configuration.GetSection("Authentication:Key").Value!);
+            var issuer = configuration.GetSection("Authentication:Issuer").Value!;
+            var audience = configuration.GetSection("Authentication:Audience").Value!;
+
+            services.AddAuthentication("Bearer").
                 AddJwtBearer("Bearer", options =>
                 {
-                    var key = Encoding.UTF8.GetBytes(configuration.GetSection("Authentication:Key").Value!);
-                    var issuer = configuration.GetSection("Authentication:Issuer").Value!;
-                    var audience = configuration.GetSection("Authentication:Audience").Value!;
-
                     options.RequireHttpsMetadata = true;
                     options.SaveToken = true;
                     options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
